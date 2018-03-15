@@ -6,11 +6,10 @@
 |:-----|:-----|
 |CAMIS|This is an unique identifier for the entity (restaurant)|
 |DBA|This field represents the name (doing business as) of the entity (restaurant)|
- 
- BORO: Borough in which the entity (restaurant) is located. NOTE: There may be discrepancies between zip code and listed boro due to differences in an establishment's mailing address and physical location
- BUILDING: This field represents the building number for the entity (restaurant)
- * STREET: This field represents the street name at which the entity (restaurant) is located.
- * ZIPCODE: Zip code as per the address of the entity (restaurant)
+|BORO|Borough in which the entity (restaurant) is located. NOTE: There may be discrepancies between zip code and listed boro due to differences in an establishment's mailing address and physical location|
+|BUILDING|This field represents the building number for the entity (restaurant)|
+|STREET|This field represents the street name at which the entity (restaurant) is located|
+|ZIPCODE|Zip code as per the address of the entity (restaurant)|
  * PHONE: Phone Number
  CUISINE DESCRIPTION: This field describes the entity (restaurant) cuisine.
  INSPECTION DATE: This field represents the date of inspection
