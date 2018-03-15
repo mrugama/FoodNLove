@@ -1,6 +1,7 @@
 # Restaurant inspection
 
-|Data dictionary|
+## Data dictionary
+
 |Fields|Description|
 |:-----|:-----|
 |CAMIS|This is an unique identifier for the entity (restaurant)|
