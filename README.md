@@ -2,7 +2,7 @@
 
 ## Data dictionary
 
-|Field (Original)|Field (named)|Description|
+|API|Named|Description|
 |:-----|:-----|:-----|
 |CAMIS|id|This is an unique identifier for the entity (restaurant)|
 |DBA|name|This field represents the name (doing business as) of the entity (restaurant)|
