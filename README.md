@@ -3,7 +3,7 @@
 ## Data dictionary
 
 |Field (Original)|Field (named)|Description|
-|:-----|:-----|
+|:-----|:-----|:-----|
 |CAMIS|id|This is an unique identifier for the entity (restaurant)|
 |DBA|name|This field represents the name (doing business as) of the entity (restaurant)|
 |BORO|boro|Borough in which the entity (restaurant) is located. NOTE: There may be discrepancies between zip code and listed boro due to differences in an establishment's mailing address and physical location|
