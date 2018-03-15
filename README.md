@@ -1,4 +1,4 @@
-##Restaurant inspection
+# Restaurant inspection
 
 |Data dictionary|
 |Fields|Description|
