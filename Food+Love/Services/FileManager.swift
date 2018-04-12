@@ -1,11 +1,12 @@
+
 //  FileManager.swift
 //  Food+Love
-//  Created by C4Q on 3/14/18.
+//  Created by Winston Maragh on 3/14/18.
 //  Copyright © 2018 Winston Maragh. All rights reserved.
-
 
 import Foundation
 import UIKit
+
 
 class FileManagerHelper{
 	private init(){}
@@ -13,6 +14,9 @@ class FileManagerHelper{
 
 	//MARK: FileName
 	let filePathName = "Venues.plist"
+	let datesPathName = "Dates.plist"
+	let matchesPathName = "Matches.plist"
+
 
 	//MARK: Variables
 	private var venues = [Venue]() {

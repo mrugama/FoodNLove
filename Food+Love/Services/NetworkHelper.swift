@@ -1,10 +1,12 @@
+
 //  NetworkHelper.swift
 //  Food+Love
-//  Created by C4Q on 3/14/18.
+//  Created by Winston Maragh on 3/14/18.
 //  Copyright © 2018 Winston Maragh. All rights reserved.
 
 import Foundation
 import UIKit
+
 
 //HTTP
 enum HTTPVerb: String {
@@ -19,6 +21,8 @@ enum HTTPVerb: String {
 enum AppError: Error {
 	case badData
 	case badURL
+    case badChildren
+    case noUserExist
 	case unauthenticated
 	case codingError(rawError: Error)
 	case invalidJSONResponse
@@ -77,7 +81,7 @@ struct NetworkHelper {
 struct ImageHelper {
 	private init() {}
 	static let manager = ImageHelper()
-
+   let imageCache = NSCache<NSString, UIImage>()
 	func getImage(from urlStr: String,
 								completionHandler: @escaping (UIImage) -> Void,
 								errorHandler: @escaping (AppError) -> Void) {
@@ -89,12 +93,22 @@ struct ImageHelper {
 			completionHandler(savedImage)
 			return
 		}
+       //check cache for image first
 
+        if let cachedImage = imageCache.object(forKey: urlStr as NSString)
+        {
+            completionHandler(cachedImage)
+            return 
+        }
 		//Do completion only on first run, if it already exist do nothing.
 		let completion: (Data) -> Void = {(data: Data) in
 			guard let onlineImage = UIImage(data: data) else {return}
 			//Save Image to FileManager
 			FileManagerHelper.manager.saveUIImage(with: urlStr, image: onlineImage)
+            
+            // cach image
+            self.imageCache.setObject(onlineImage, forKey: urlStr as NSString)
+            
 			completionHandler(onlineImage) //call completionHandler
 		}
 
